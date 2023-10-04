@@ -126,7 +126,7 @@ def process(args):
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         fp16=True,
-        fp16_backend="apex",
+        fp16_backend="apex.contrib",
         output_dir="./",
         logging_steps=250,
         eval_steps=5000,
