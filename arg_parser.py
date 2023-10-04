@@ -18,4 +18,6 @@ def parse_args():
     parser.add_argument("--model_output_path", type=str, default='./model')
     parser.add_argument("--tokenizer_output_path", type=str, default='./tokenizer')
 
+    parser.add_argument("--batch_size", type=int, default=1)
+
     return parser.parse_args()

@@ -89,7 +89,7 @@ def process(args):
     # max encoder length is 8192 for PubMed
     encoder_max_length = 8192
     decoder_max_length = 512
-    batch_size = 2
+    batch_size = args.batch_size
 
     # map train data
     train_data = train_data.map(
