@@ -35,7 +35,7 @@ def process(args):
     tokenizer = LEDTokenizer.from_pretrained(args.tokenizer_output_path)
     model = LEDForConditionalGeneration.from_pretrained(args.model_output_path).to("cuda").half()
 
-    result = test_dataset.map(generate_answer, batched=True, batch_size=4)
+    result = test_dataset.map(generate_answer, batched=True, batch_size=args.batch_size)
 
     # load rouge
     rouge = load_metric("rouge")
